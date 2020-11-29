@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE6CF2962573FE43009E5624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2952573FE43009E5624 /* AppDelegate.swift */; };
 		CE6CF2982573FE43009E5624 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2972573FE43009E5624 /* SceneDelegate.swift */; };
-		CE6CF29A2573FE43009E5624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2992573FE43009E5624 /* ViewController.swift */; };
+		CE6CF29A2573FE43009E5624 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2992573FE43009E5624 /* MapViewController.swift */; };
 		CE6CF29D2573FE43009E5624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF29B2573FE43009E5624 /* Main.storyboard */; };
 		CE6CF29F2573FE43009E5624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF29E2573FE43009E5624 /* Assets.xcassets */; };
 		CE6CF2A22573FE44009E5624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF2A02573FE44009E5624 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		CE6CF2922573FE43009E5624 /* PicturesOnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicturesOnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CF2952573FE43009E5624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6CF2972573FE43009E5624 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE6CF2992573FE43009E5624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE6CF2992573FE43009E5624 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CE6CF29C2573FE43009E5624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6CF29E2573FE43009E5624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6CF2A12573FE44009E5624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				CE6CF2952573FE43009E5624 /* AppDelegate.swift */,
 				CE6CF2972573FE43009E5624 /* SceneDelegate.swift */,
-				CE6CF2992573FE43009E5624 /* ViewController.swift */,
+				CE6CF2992573FE43009E5624 /* MapViewController.swift */,
 				CE6CF29B2573FE43009E5624 /* Main.storyboard */,
 				CE6CF29E2573FE43009E5624 /* Assets.xcassets */,
 				CE6CF2A02573FE44009E5624 /* LaunchScreen.storyboard */,
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6CF29A2573FE43009E5624 /* ViewController.swift in Sources */,
+				CE6CF29A2573FE43009E5624 /* MapViewController.swift in Sources */,
 				CE6CF2962573FE43009E5624 /* AppDelegate.swift in Sources */,
 				CE6CF2982573FE43009E5624 /* SceneDelegate.swift in Sources */,
 			);

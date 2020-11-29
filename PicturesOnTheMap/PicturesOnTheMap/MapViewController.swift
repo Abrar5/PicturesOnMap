@@ -2,13 +2,16 @@
 //  ViewController.swift
 //  PicturesOnTheMap
 //
-//  Created by user on 14/04/1442 AH.
+//  Created by Abrar on 14/04/1442 AH.
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
 
+    @IBOutlet mapView: MKMapView
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
