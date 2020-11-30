@@ -20,6 +20,14 @@ class Photo : Codable {
         case latitude
         case longitude
     }
+    
+}
+
+extension Photo: Equatable {
+    static func == (lhs: Photo, rhs: Photo) -> Bool {
+        // Two Photos are the same if they have the same photoID
+        return lhs.photoID == rhs.photoID
+    }
 }
 
 
