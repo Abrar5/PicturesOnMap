@@ -19,15 +19,22 @@ class PhotosViewController: UIViewController {
         
         //Initiating the web service request
         store.fetchPhotos {
-               (photosResult) in
-                     
-               switch photosResult {
-               case let .success(photos):
-                   print("Successfully found \(photos.count) photos.")
+            (photosResult) in
+            
+            switch photosResult {
+            case let .success(photos):
+                print("Successfully found \(photos.count) photos.")
                 
-               case let .failure(error):
-                   print("Error fetching photos: \(error)")
-               }
-       }
-}
+                //Showing the first photo
+//                if let firstPhoto = photos.first {
+//                    self.updateImageView(for: firstPhoto)
+//                }
+                
+            case let .failure(error):
+                print("Error fetching photos: \(error)")
+            }
+        }
+    }
+    
+
 }

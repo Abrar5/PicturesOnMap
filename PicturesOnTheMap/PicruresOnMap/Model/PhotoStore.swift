@@ -6,8 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
-//Initiating the web service requests
+//MARK: - Error Handling
+
+//Adding an error type to represent photo errors
+enum PhotoError: Error {
+    case imageCreationError
+    case missingImageURL
+}
+
+//MARK: - Photo Handling
+
+//Initiating the web service requests & Sending the Request
 class PhotoStore {
     
     //Adding a URLSession property to hold instance of URLSession.
@@ -30,7 +41,9 @@ class PhotoStore {
             print(String(data: data!,
                          encoding: .utf8)!)
             
+            OperationQueue.main.addOperation {
             completion(result)
+            }
         }
         task.resume()
     }
@@ -46,4 +59,48 @@ class PhotoStore {
         return FlickrAPI.photos(fromJSON: jsonData)
     }
     
+    //Download image data
+    func fetchImage(for photo: Photo,
+                    completion: @escaping (Result<UIImage, Error>) -> Void) {
+        
+        guard let photoURL = photo.remoteURL else {
+            completion(.failure(PhotoError.missingImageURL))
+            return
+        }
+        
+        let request = URLRequest(url: photoURL)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in
+            
+            //Convert into image
+            let result = self.processImageRequest(data: data, error: error)
+            
+            OperationQueue.main.addOperation {
+            completion(result)
+            }
+        }
+        
+        task.resume()
+    }
+    
+    //processes the data from the request into an image
+    private func processImageRequest(data: Data?,
+                                     error: Error?) -> Result<UIImage, Error> {
+        guard let imageData = data,
+              let image = UIImage(data: imageData) else {
+            
+            //Couldn't create an image
+            if data == nil {
+                return .failure(error!)
+            } else {
+                return .failure(PhotoError.imageCreationError)
+            }
+                    }
+
+        return .success(image)
+    }
+    
+    
 }
+
+
