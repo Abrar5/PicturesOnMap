@@ -34,10 +34,35 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 print("Error fetching photos: \(error)")
                 self.photoDataSource.photos.removeAll()
             }
+            
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
     
+    // MARK: - UICollectionViewDelegate
+    
+    //Fetching the cell’s image
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        
+        // Download the image data
+        store.fetchImage(for: photo) { (result) -> Void in
+            
+            // the most recent index path for the photo
+            guard let photoIndex = self.photoDataSource.photos.firstIndex(of: photo),
+                  case let .success(image) = result else {
+                return
+            }
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+            
+            // When the request finishes, find the current cell for this photo
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                cell.updateActivityIndicator(displaying: image)
+            }
+        }
+    }
 }
 
 
