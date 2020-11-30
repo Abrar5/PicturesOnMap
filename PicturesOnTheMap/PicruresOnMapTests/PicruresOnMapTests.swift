@@ -1,14 +1,14 @@
 //
-//  PicturesOnTheMapTests.swift
-//  PicturesOnTheMapTests
+//  PicruresOnMapTests.swift
+//  PicruresOnMapTests
 //
 //  Created by user on 14/04/1442 AH.
 //
 
 import XCTest
-@testable import PicturesOnTheMap
+@testable import PicruresOnMap
 
-class PicturesOnTheMapTests: XCTestCase {
+class PicruresOnMapTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
