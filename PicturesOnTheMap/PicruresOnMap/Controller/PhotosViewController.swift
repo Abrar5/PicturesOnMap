@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -17,24 +17,27 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
+        
         //Initiating the web service request
         store.fetchPhotos {
             (photosResult) in
             
+            //Updating the collection view with the web service data
             switch photosResult {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos.")
-                
-                //Showing the first photo
-//                if let firstPhoto = photos.first {
-//                    self.updateImageView(for: firstPhoto)
-//                }
+                self.photoDataSource.photos = photos
                 
             case let .failure(error):
                 print("Error fetching photos: \(error)")
+                self.photoDataSource.photos.removeAll()
             }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
     
-
 }
+
+
