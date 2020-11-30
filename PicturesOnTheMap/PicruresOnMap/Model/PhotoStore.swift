@@ -21,6 +21,8 @@ enum PhotoError: Error {
 //Initiating the web service requests & Sending the Request
 class PhotoStore {
     
+    let imageStore = ImageStore()
+    
     //Adding a URLSession property to hold instance of URLSession.
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
@@ -63,6 +65,18 @@ class PhotoStore {
     func fetchImage(for photo: Photo,
                     completion: @escaping (Result<UIImage, Error>) -> Void) {
         
+        //Retrieve Image
+        let photoKey = photo.photoID
+        if let image = imageStore.image(forKey: photoKey) {
+            
+            OperationQueue.main.addOperation {
+                completion(.success(image))
+            }
+            
+            return
+            
+        }
+        
         guard let photoURL = photo.remoteURL else {
             completion(.failure(PhotoError.missingImageURL))
             return
@@ -74,6 +88,11 @@ class PhotoStore {
             
             //Convert into image
             let result = self.processImageRequest(data: data, error: error)
+            
+            //Add Image
+            if case let .success(image) = result {
+                self.imageStore.setImage(image, forKey: photoKey)
+            }
             
             OperationQueue.main.addOperation {
             completion(result)
