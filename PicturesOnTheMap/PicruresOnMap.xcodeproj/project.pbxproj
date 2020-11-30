@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE516985257455AB0047C438 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516984257455AB0047C438 /* PhotoStore.swift */; };
+		CE51698D257457850047C438 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51698C257457850047C438 /* PhotosViewController.swift */; };
+		CE5169952574BBFA0047C438 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5169942574BBFA0047C438 /* PhotoDataSource.swift */; };
+		CE51699D2574BC6D0047C438 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51699C2574BC6D0047C438 /* Photo.swift */; };
+		CE5169B225755B8B0047C438 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5169B125755B8B0047C438 /* FlickrAPI.swift */; };
+		CE6CF2572573FC01009E5624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2562573FC01009E5624 /* AppDelegate.swift */; };
+		CE6CF2592573FC01009E5624 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2582573FC01009E5624 /* SceneDelegate.swift */; };
+		CE6CF25B2573FC01009E5624 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF25A2573FC01009E5624 /* MapViewController.swift */; };
+		CE6CF25E2573FC01009E5624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF25C2573FC01009E5624 /* Main.storyboard */; };
+		CE6CF2602573FC02009E5624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF25F2573FC02009E5624 /* Assets.xcassets */; };
+		CE6CF2632573FC02009E5624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF2612573FC02009E5624 /* LaunchScreen.storyboard */; };
+		CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */; };
+		CE6CF2792573FC02009E5624 /* PicruresOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE6CF26A2573FC02009E5624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE6CF24B2573FC01009E5624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6CF2522573FC01009E5624;
+			remoteInfo = PicruresOnMap;
+		};
+		CE6CF2752573FC02009E5624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE6CF24B2573FC01009E5624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE6CF2522573FC01009E5624;
+			remoteInfo = PicruresOnMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE516984257455AB0047C438 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+		CE51698C257457850047C438 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		CE5169942574BBFA0047C438 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		CE51699C2574BC6D0047C438 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CE5169B125755B8B0047C438 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		CE6CF2532573FC01009E5624 /* PicruresOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicruresOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6CF2562573FC01009E5624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE6CF2582573FC01009E5624 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE6CF25A2573FC01009E5624 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE6CF25D2573FC01009E5624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE6CF25F2573FC02009E5624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE6CF2622573FC02009E5624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE6CF2642573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6CF2692573FC02009E5624 /* PicruresOnMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicruresOnMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicruresOnMapTests.swift; sourceTree = "<group>"; };
+		CE6CF26F2573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicruresOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicruresOnMapUITests.swift; sourceTree = "<group>"; };
+		CE6CF27A2573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE6CF2502573FC01009E5624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2662573FC02009E5624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2712573FC02009E5624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE51697925744D050047C438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE516984257455AB0047C438 /* PhotoStore.swift */,
+				CE5169942574BBFA0047C438 /* PhotoDataSource.swift */,
+				CE51699C2574BC6D0047C438 /* Photo.swift */,
+				CE5169B125755B8B0047C438 /* FlickrAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE51697A25744D0E0047C438 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CF25C2573FC01009E5624 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE51697B25744D160047C438 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CF25A2573FC01009E5624 /* MapViewController.swift */,
+				CE51698C257457850047C438 /* PhotosViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE6CF24A2573FC01009E5624 = {
+			isa = PBXGroup;
+			children = (
+				CE6CF2552573FC01009E5624 /* PicruresOnMap */,
+				CE6CF26C2573FC02009E5624 /* PicruresOnMapTests */,
+				CE6CF2772573FC02009E5624 /* PicruresOnMapUITests */,
+				CE6CF2542573FC01009E5624 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE6CF2542573FC01009E5624 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CF2532573FC01009E5624 /* PicruresOnMap.app */,
+				CE6CF2692573FC02009E5624 /* PicruresOnMapTests.xctest */,
+				CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE6CF2552573FC01009E5624 /* PicruresOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				CE51697B25744D160047C438 /* Controller */,
+				CE51697A25744D0E0047C438 /* View */,
+				CE51697925744D050047C438 /* Model */,
+				CE6CF2562573FC01009E5624 /* AppDelegate.swift */,
+				CE6CF2582573FC01009E5624 /* SceneDelegate.swift */,
+				CE6CF25F2573FC02009E5624 /* Assets.xcassets */,
+				CE6CF2612573FC02009E5624 /* LaunchScreen.storyboard */,
+				CE6CF2642573FC02009E5624 /* Info.plist */,
+			);
+			path = PicruresOnMap;
+			sourceTree = "<group>";
+		};
+		CE6CF26C2573FC02009E5624 /* PicruresOnMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */,
+				CE6CF26F2573FC02009E5624 /* Info.plist */,
+			);
+			path = PicruresOnMapTests;
+			sourceTree = "<group>";
+		};
+		CE6CF2772573FC02009E5624 /* PicruresOnMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */,
+				CE6CF27A2573FC02009E5624 /* Info.plist */,
+			);
+			path = PicruresOnMapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE6CF2522573FC01009E5624 /* PicruresOnMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6CF27D2573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMap" */;
+			buildPhases = (
+				CE6CF24F2573FC01009E5624 /* Sources */,
+				CE6CF2502573FC01009E5624 /* Frameworks */,
+				CE6CF2512573FC01009E5624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicruresOnMap;
+			productName = PicruresOnMap;
+			productReference = CE6CF2532573FC01009E5624 /* PicruresOnMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE6CF2682573FC02009E5624 /* PicruresOnMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6CF2802573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMapTests" */;
+			buildPhases = (
+				CE6CF2652573FC02009E5624 /* Sources */,
+				CE6CF2662573FC02009E5624 /* Frameworks */,
+				CE6CF2672573FC02009E5624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE6CF26B2573FC02009E5624 /* PBXTargetDependency */,
+			);
+			name = PicruresOnMapTests;
+			productName = PicruresOnMapTests;
+			productReference = CE6CF2692573FC02009E5624 /* PicruresOnMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE6CF2732573FC02009E5624 /* PicruresOnMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6CF2832573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMapUITests" */;
+			buildPhases = (
+				CE6CF2702573FC02009E5624 /* Sources */,
+				CE6CF2712573FC02009E5624 /* Frameworks */,
+				CE6CF2722573FC02009E5624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE6CF2762573FC02009E5624 /* PBXTargetDependency */,
+			);
+			name = PicruresOnMapUITests;
+			productName = PicruresOnMapUITests;
+			productReference = CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE6CF24B2573FC01009E5624 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					CE6CF2522573FC01009E5624 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					CE6CF2682573FC02009E5624 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = CE6CF2522573FC01009E5624;
+					};
+					CE6CF2732573FC02009E5624 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = CE6CF2522573FC01009E5624;
+					};
+				};
+			};
+			buildConfigurationList = CE6CF24E2573FC01009E5624 /* Build configuration list for PBXProject "PicruresOnMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE6CF24A2573FC01009E5624;
+			productRefGroup = CE6CF2542573FC01009E5624 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE6CF2522573FC01009E5624 /* PicruresOnMap */,
+				CE6CF2682573FC02009E5624 /* PicruresOnMapTests */,
+				CE6CF2732573FC02009E5624 /* PicruresOnMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE6CF2512573FC01009E5624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CF2632573FC02009E5624 /* LaunchScreen.storyboard in Resources */,
+				CE6CF2602573FC02009E5624 /* Assets.xcassets in Resources */,
+				CE6CF25E2573FC01009E5624 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2672573FC02009E5624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2722573FC02009E5624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE6CF24F2573FC01009E5624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE51699D2574BC6D0047C438 /* Photo.swift in Sources */,
+				CE516985257455AB0047C438 /* PhotoStore.swift in Sources */,
+				CE6CF25B2573FC01009E5624 /* MapViewController.swift in Sources */,
+				CE5169952574BBFA0047C438 /* PhotoDataSource.swift in Sources */,
+				CE51698D257457850047C438 /* PhotosViewController.swift in Sources */,
+				CE6CF2572573FC01009E5624 /* AppDelegate.swift in Sources */,
+				CE6CF2592573FC01009E5624 /* SceneDelegate.swift in Sources */,
+				CE5169B225755B8B0047C438 /* FlickrAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2652573FC02009E5624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6CF2702573FC02009E5624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6CF2792573FC02009E5624 /* PicruresOnMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE6CF26B2573FC02009E5624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6CF2522573FC01009E5624 /* PicruresOnMap */;
+			targetProxy = CE6CF26A2573FC02009E5624 /* PBXContainerItemProxy */;
+		};
+		CE6CF2762573FC02009E5624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE6CF2522573FC01009E5624 /* PicruresOnMap */;
+			targetProxy = CE6CF2752573FC02009E5624 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE6CF25C2573FC01009E5624 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE6CF25D2573FC01009E5624 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE6CF2612573FC02009E5624 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE6CF2622573FC02009E5624 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE6CF27B2573FC02009E5624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE6CF27C2573FC02009E5624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE6CF27E2573FC02009E5624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE6CF27F2573FC02009E5624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE6CF2812573FC02009E5624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicruresOnMap.app/PicruresOnMap";
+			};
+			name = Debug;
+		};
+		CE6CF2822573FC02009E5624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicruresOnMap.app/PicruresOnMap";
+			};
+			name = Release;
+		};
+		CE6CF2842573FC02009E5624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicruresOnMap;
+			};
+			name = Debug;
+		};
+		CE6CF2852573FC02009E5624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PicruresOnMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PicruresOnMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE6CF24E2573FC01009E5624 /* Build configuration list for PBXProject "PicruresOnMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6CF27B2573FC02009E5624 /* Debug */,
+				CE6CF27C2573FC02009E5624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE6CF27D2573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6CF27E2573FC02009E5624 /* Debug */,
+				CE6CF27F2573FC02009E5624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE6CF2802573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6CF2812573FC02009E5624 /* Debug */,
+				CE6CF2822573FC02009E5624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE6CF2832573FC02009E5624 /* Build configuration list for PBXNativeTarget "PicruresOnMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6CF2842573FC02009E5624 /* Debug */,
+				CE6CF2852573FC02009E5624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE6CF24B2573FC01009E5624 /* Project object */;
+}
