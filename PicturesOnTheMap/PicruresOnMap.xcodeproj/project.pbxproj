@@ -12,6 +12,7 @@
 		CE5169952574BBFA0047C438 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5169942574BBFA0047C438 /* PhotoDataSource.swift */; };
 		CE51699D2574BC6D0047C438 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51699C2574BC6D0047C438 /* Photo.swift */; };
 		CE5169B225755B8B0047C438 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5169B125755B8B0047C438 /* FlickrAPI.swift */; };
+		CE5169BD25757AC10047C438 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5169BC25757AC10047C438 /* PhotoCollectionViewCell.swift */; };
 		CE6CF2572573FC01009E5624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2562573FC01009E5624 /* AppDelegate.swift */; };
 		CE6CF2592573FC01009E5624 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2582573FC01009E5624 /* SceneDelegate.swift */; };
 		CE6CF25B2573FC01009E5624 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF25A2573FC01009E5624 /* MapViewController.swift */; };
@@ -45,6 +46,7 @@
 		CE5169942574BBFA0047C438 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		CE51699C2574BC6D0047C438 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CE5169B125755B8B0047C438 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		CE5169BC25757AC10047C438 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE6CF2532573FC01009E5624 /* PicruresOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicruresOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CF2562573FC01009E5624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6CF2582573FC01009E5624 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6CF25C2573FC01009E5624 /* Main.storyboard */,
+				CE5169BC25757AC10047C438 /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				CE6CF25B2573FC01009E5624 /* MapViewController.swift in Sources */,
 				CE5169952574BBFA0047C438 /* PhotoDataSource.swift in Sources */,
 				CE51698D257457850047C438 /* PhotosViewController.swift in Sources */,
+				CE5169BD25757AC10047C438 /* PhotoCollectionViewCell.swift in Sources */,
 				CE6CF2572573FC01009E5624 /* AppDelegate.swift in Sources */,
 				CE6CF2592573FC01009E5624 /* SceneDelegate.swift in Sources */,
 				CE5169B225755B8B0047C438 /* FlickrAPI.swift in Sources */,

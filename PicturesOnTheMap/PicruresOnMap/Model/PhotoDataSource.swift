@@ -20,7 +20,8 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
     }
 
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
+    cell.updateActivityIndicator(displaying: nil)
         
         return cell
     }
