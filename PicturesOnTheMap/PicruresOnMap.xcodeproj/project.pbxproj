@@ -90,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				CE516984257455AB0047C438 /* PhotoStore.swift */,
+				CE5169B125755B8B0047C438 /* FlickrAPI.swift */,
 				CE5169942574BBFA0047C438 /* PhotoDataSource.swift */,
 				CE51699C2574BC6D0047C438 /* Photo.swift */,
-				CE5169B125755B8B0047C438 /* FlickrAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
