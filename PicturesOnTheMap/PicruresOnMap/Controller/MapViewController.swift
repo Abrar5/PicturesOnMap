@@ -15,7 +15,6 @@ import CoreLocation
 //    var longitudeString: String {get set}
 //}
 
-
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
