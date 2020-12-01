@@ -9,21 +9,14 @@ import UIKit
 import MapKit
 import CoreLocation
 
-//Pass Location(1)
-//protocol LocationDelegate {
-//    var latitudeString: String {get set}
-//    var longitudeString: String {get set}
-//}
-
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-
     let locationManager = CLLocationManager()
     
-    //Pass Location(2)
-   // var locationDelegate: LocationDelegate
-    
+    static var latitudeString: String = "0"
+    static var longitudeString: String = "0"
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -45,7 +38,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.last {
             locationManager.startUpdatingLocation()
             
-            mapFocus(location)
+          mapFocus(location)
+           
         }
     }
     
@@ -64,11 +58,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let coordinate = CLLocationCoordinate2D(latitude: latitude,
                                                 longitude: longitude)
         print("latitude: \(latitude) longitude: \(longitude)")
-                
+        
         //Pass Location(3)
 //        self.locationDelegate.latitudeString = String(latitude)
 //        self.locationDelegate.longitudeString = String(longitude)
-
+        
+        MapViewController.latitudeString = String(latitude)
+        MapViewController.longitudeString = String(longitude)
+        print("\(MapViewController.latitudeString) , \(MapViewController.longitudeString)")
+        
         //set a focusede region
         let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
         let region = MKCoordinateRegion(center: coordinate,
@@ -79,9 +77,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let annotiation = MKPointAnnotation()
         annotiation.coordinate = coordinate
         mapView.addAnnotation(annotiation)
-        
-        //Pass Location(4)
-       // locationDelegate.speceficLocation(latitude: latitudeString, longitude: longitudeString)
+
     }
     
     //MARK: - Move to Another View Controller
@@ -90,12 +86,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         switch segue.identifier {
         
         case "PhotosSegue":
-            
             let photoViewController = segue.destination as! PhotosViewController
             photoViewController.store = PhotoStore()
-            
-        //Pass Location(4)
-           // photoViewControlle.LocationDelegate = self
             
         default:
             preconditionFailure("Unexpected segue identifier.")

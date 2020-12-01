@@ -59,7 +59,38 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             
             // When the request finishes, find the current cell for this photo
             if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                //display image
                 cell.updateActivityIndicator(displaying: image)
+                
+                //Calculate the Date the pic was taken at:
+                guard let imageDateTaken = photo.dateTaken else {
+                    return
+                }
+                
+                print(imageDateTaken)
+      
+                let today = Date()
+       
+                //Display The date pic was taken on
+                // to describe the duration between `today` and `pic taken date`
+                let dateFormatter: DateComponentsFormatter = {
+                    let formatter = DateComponentsFormatter()
+                    formatter.allowedUnits = [.year, .month]
+                    formatter.includesApproximationPhrase = true
+                    return formatter
+                }()
+                
+                let dateDescription = dateFormatter.string(from: imageDateTaken, to: today)
+                print(dateDescription!)
+                
+                cell.timingLabel.text = "\(String(describing: dateDescription!))"
+                
+                //Display the distance
+                
+                
+                
+                cell.distanceLabel.text = "Hi"
+                
             }
         }
     }

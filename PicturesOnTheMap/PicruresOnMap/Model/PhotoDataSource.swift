@@ -23,7 +23,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
     
     cell.updateActivityIndicator(displaying: nil)
-    
+    cell.timingLabel.text = ""
     cell.distanceLabel.text = ""
     
         return cell

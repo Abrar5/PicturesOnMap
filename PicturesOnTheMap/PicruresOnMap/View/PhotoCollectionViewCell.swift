@@ -11,6 +11,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var timingLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
     //Control Activity Indicator Appearance
@@ -26,4 +27,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         }
         
     }
+    
+    
 }
