@@ -36,7 +36,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         //Stop Updating Location After Getting the Last Location
         if let location = locations.last {
-            locationManager.startUpdatingLocation()
+            locationManager.stopUpdatingLocation()
             
           mapFocus(location)
            

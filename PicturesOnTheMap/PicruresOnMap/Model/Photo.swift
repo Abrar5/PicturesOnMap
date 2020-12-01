@@ -10,8 +10,8 @@ class Photo : Codable {
     let title: String
     let remoteURL: URL?
     let photoID: String
-    let latitude: String
-    let longitude: String
+    let latitude: String?
+    let longitude: String?
     let dateTaken: Date?
     
     enum CodingKeys: String, CodingKey {
