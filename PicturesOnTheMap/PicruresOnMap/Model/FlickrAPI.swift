@@ -15,16 +15,8 @@ enum EndPoint: String {
 
 // MARK: - URL
 
-struct FlickrAPI  {
-    // MARK: - Bring User's Location
-    //Pass Location(5)
-//    var latitudeString: String
-//    var longitudeString: String
-//
-//     init(latitude: String, longitude: String) {
-//        <#code#>
-//    }
-    
+class FlickrAPI  {
+
     // MARK: - API Handling
     
     private static let baseURLString = "https://api.flickr.com/services/rest"
@@ -58,7 +50,7 @@ struct FlickrAPI  {
                 queryItems.append(item)
             }
         }
-        
+
         components.queryItems = queryItems
         return components.url!
         
@@ -73,8 +65,9 @@ struct FlickrAPI  {
                             "per_page": "20",
                             "safe_search": "1",
                             "has_geo": "1",
-                            "lat" : "24.694970",
-                            "lon" : "46.724130"
+                            "radius": "1",
+                            "lat" : MapViewController.latitudeString,
+                            "long" : MapViewController.longitudeString
                         
                          ])
     }
@@ -102,6 +95,7 @@ struct FlickrAPI  {
             print("Decoding Error", error)
             return .failure(error)
         }
+        
     }
 }
 

@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let rootViewController = window!.rootViewController as! UINavigationController
-           let mapViewController = rootViewController.topViewController as! MapViewController
+       // rootViewController.topViewController as! MapViewController
           // mapViewController.store = PhotoStore()
     }
 

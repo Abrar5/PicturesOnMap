@@ -12,7 +12,7 @@ class Photo : Codable {
     let photoID: String
     let latitude: String
     let longitude: String
-    let dateTaken: Date
+    let dateTaken: Date?
     
     enum CodingKeys: String, CodingKey {
         case title
