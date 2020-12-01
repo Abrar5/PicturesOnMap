@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D2p-Ss-ZYH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VPI-nd-Oqj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -25,7 +25,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IZX-kh-dQ9"/>
+                    <navigationItem key="navigationItem" id="IZX-kh-dQ9">
+                        <barButtonItem key="rightBarButtonItem" title="Details" id="K6g-N8-uQs">
+                            <color key="tintColor" systemColor="systemIndigoColor"/>
+                            <connections>
+                                <segue destination="Kod-kR-v5r" kind="show" identifier="PhotosSegue" id="ZWr-fs-uxc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="ASa-MB-3r5" id="Kwy-Ib-rmT"/>
                     </connections>
@@ -84,6 +91,13 @@
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-3F-BiI">
                                                     <rect key="frame" x="90" y="90" width="20" height="20"/>
                                                 </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k44-Lc-v26">
+                                                    <rect key="frame" x="8" y="171" width="184" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="5fh-Y6-2dE" secondAttribute="bottom" id="1cG-QR-sFR"/>
@@ -100,6 +114,7 @@
                                         <size key="customSize" width="200" height="200"/>
                                         <connections>
                                             <outlet property="activityIndicator" destination="cWY-3F-BiI" id="aMJ-gI-3qr"/>
+                                            <outlet property="distanceLabel" destination="k44-Lc-v26" id="Z8i-Gg-njg"/>
                                             <outlet property="imageView" destination="5fh-Y6-2dE" id="EDd-J2-r48"/>
                                         </connections>
                                     </collectionViewCell>
@@ -122,30 +137,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeB-p1-01j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.11594202898561" y="629.46428571428567"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="V2b-I8-XK2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D2p-Ss-ZYH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Og5-LW-7Xs">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Kod-kR-v5r" kind="relationship" relationship="rootViewController" id="qdF-ge-vVp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9L-Sy-1AZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-42.028985507246382" y="629.46428571428567"/>
+            <point key="canvasLocation" x="1767" y="-38"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

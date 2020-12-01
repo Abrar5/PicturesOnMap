@@ -15,7 +15,18 @@ enum EndPoint: String {
 
 // MARK: - URL
 
-struct FlickrAPI {
+struct FlickrAPI  {
+    // MARK: - Bring User's Location
+    //Pass Location(5)
+//    var latitudeString: String
+//    var longitudeString: String
+//
+//     init(latitude: String, longitude: String) {
+//        <#code#>
+//    }
+    
+    // MARK: - API Handling
+    
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let apiKey = "b2f9f1783412cdf8fe6aef63e11ca7fd"
     
@@ -58,12 +69,13 @@ struct FlickrAPI {
         
         return flickrURL(endPoint: .searchPhotosMethod,
                          parameters: [
-                            "extras": "url_n, geo",
-                            "per_page": "10",
+                            "extras": "url_n, geo, date_taken",
+                            "per_page": "20",
                             "safe_search": "1",
                             "has_geo": "1",
                             "lat" : "24.694970",
-                            "long" : "46.724130"
+                            "lon" : "46.724130"
+                        
                          ])
     }
     
@@ -71,6 +83,13 @@ struct FlickrAPI {
     static func photos(fromJSON data: Data) -> Result<[Photo], Error> {
         do {
             let decoder = JSONDecoder()
+            
+            //Adding a custom date decoding strategy
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
             
             let flickrResponse = try decoder.decode(FlickrResponse.self, from: data)
            

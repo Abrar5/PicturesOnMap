@@ -11,6 +11,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     //Control Activity Indicator Appearance
     func updateActivityIndicator(displaying image: UIImage?) {
