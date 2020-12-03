@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
@@ -86,14 +87,24 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 cell.timingLabel.text = "\(String(describing: dateDescription!))"
                 
                 //Display the distance
+                guard let imageLatitude = photo.latitude,
+                      let imageLongitude = photo.longitude else {
+                    return
+                }
                 
+                let coordinate1 = CLLocation(latitude: Double(MapViewController.latitudeString)!, longitude: Double(MapViewController.longitudeString)!)
                 
-                
-                cell.distanceLabel.text = "Hi"
+                let coordinate2 = CLLocation(latitude: Double(imageLatitude)!, longitude: Double(imageLongitude)!)
+
+                let distanceInKM = coordinate1.distance(from: coordinate2) / 1000
+                                
+                cell.distanceLabel.text = "\(Int(round(distanceInKM))) km"
                 
             }
         }
     }
+    
+
 }
 
 

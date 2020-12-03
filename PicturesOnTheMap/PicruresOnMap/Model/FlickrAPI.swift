@@ -65,10 +65,9 @@ class FlickrAPI  {
                             "per_page": "20",
                             "safe_search": "1",
                             "has_geo": "1",
-                            "radius": "1",
+                            "radius": "0.621371192",
                             "lat" : MapViewController.latitudeString,
-                            "long" : MapViewController.longitudeString
-                        
+                            "lon" : MapViewController.longitudeString
                          ])
     }
     

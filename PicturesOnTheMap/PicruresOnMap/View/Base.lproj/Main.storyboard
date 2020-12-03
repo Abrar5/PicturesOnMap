@@ -17,13 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-MB-3r5">
-                                <rect key="frame" x="0.0" y="32" width="414" height="830"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-MB-3r5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dV8-vl-vg2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GkG-fi-ilt"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dV8-vl-vg2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BBf-hr-UGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dV8-vl-vg2" secondAttribute="trailing" id="Lx9-uQ-5d5"/>
+                            <constraint firstItem="ASa-MB-3r5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ThR-GX-Wgd"/>
+                            <constraint firstItem="dV8-vl-vg2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eaK-tO-2Zo"/>
+                            <constraint firstItem="ASa-MB-3r5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kUF-pM-X1Z"/>
+                            <constraint firstItem="ASa-MB-3r5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kUQ-vk-JKh"/>
+                            <constraint firstItem="ASa-MB-3r5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lw9-lk-ozB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IZX-kh-dQ9">
                         <barButtonItem key="rightBarButtonItem" title="Details" id="K6g-N8-uQs">

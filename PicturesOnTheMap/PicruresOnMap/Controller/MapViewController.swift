@@ -30,13 +30,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    //MARK: - Map Types
+    
+    @IBAction func mapTypeChanged(_ segControl: UISegmentedControl) {
+        switch segControl.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .hybrid
+        case 2:
+            mapView.mapType = .satellite
+        default:
+            break
+            
+        }
+    }
+    
     //MARK: - Call After Updating User's Location
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //Stop Updating Location After Getting the Last Location
         if let location = locations.last {
-            locationManager.startUpdatingLocation()
+            locationManager.stopUpdatingLocation()
             
           mapFocus(location)
            
