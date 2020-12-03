@@ -16,7 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     static var latitudeString: String = "0"
     static var longitudeString: String = "0"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,8 +54,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
             
-          mapFocus(location)
-           
+            mapFocus(location)
+            
         }
     }
     
@@ -89,7 +89,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let annotiation = MKPointAnnotation()
         annotiation.coordinate = coordinate
         mapView.addAnnotation(annotiation)
-
+        
     }
     
     //MARK: - Move to Another View Controller

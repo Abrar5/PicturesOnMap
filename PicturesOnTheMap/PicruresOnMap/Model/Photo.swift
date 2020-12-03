@@ -6,7 +6,7 @@
 //
 import Foundation
 
-class Photo : Codable {
+struct Photo : Codable {
     let title: String
     let remoteURL: URL?
     let photoID: String
