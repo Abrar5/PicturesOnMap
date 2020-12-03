@@ -62,10 +62,10 @@ class FlickrAPI  {
         return flickrURL(endPoint: .searchPhotosMethod,
                          parameters: [
                             "extras": "url_n, geo, date_taken",
-                            "per_page": "20",
+                            "per_page": "30",
                             "safe_search": "1",
                             "has_geo": "1",
-                            "radius": "0.621371192",
+                            "radius": "2",
                             "lat" : MapViewController.latitudeString,
                             "lon" : MapViewController.longitudeString
                          ])

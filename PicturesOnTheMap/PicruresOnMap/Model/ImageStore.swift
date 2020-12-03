@@ -2,7 +2,7 @@
 //  ImageStore.swift
 //  LootLogger
 //
-//  Created by user on 06/03/1442 AH.
+//  Created by Abrar on 06/03/1442 AH.
 //
 
 import UIKit

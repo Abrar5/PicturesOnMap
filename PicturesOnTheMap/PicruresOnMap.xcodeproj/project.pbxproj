@@ -22,6 +22,8 @@
 		CE6CF2632573FC02009E5624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF2612573FC02009E5624 /* LaunchScreen.storyboard */; };
 		CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */; };
 		CE6CF2792573FC02009E5624 /* PicruresOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */; };
+		CEB49B032578F4A900E3170F /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B022578F4A900E3170F /* MapTests.swift */; };
+		CEB49B0B2578F73100E3170F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B0A2578F73100E3170F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicruresOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicruresOnMapUITests.swift; sourceTree = "<group>"; };
 		CE6CF27A2573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB49B022578F4A900E3170F /* MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
+		CEB49B0A2578F73100E3170F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CEC3E14D2576FFD0007DC1C3 /* PicruresOnMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicruresOnMap.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,8 @@
 			children = (
 				CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */,
 				CE6CF26F2573FC02009E5624 /* Info.plist */,
+				CEB49B022578F4A900E3170F /* MapTests.swift */,
+				CEB49B0A2578F73100E3170F /* Constants.swift */,
 			);
 			path = PicruresOnMapTests;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */,
+				CEB49B032578F4A900E3170F /* MapTests.swift in Sources */,
+				CEB49B0B2578F73100E3170F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +501,7 @@
 				CODE_SIGN_ENTITLEMENTS = PicruresOnMap/PicruresOnMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBKV4LY323;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = PicruresOnMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +524,7 @@
 				CODE_SIGN_ENTITLEMENTS = PicruresOnMap/PicruresOnMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBKV4LY323;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = PicruresOnMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
