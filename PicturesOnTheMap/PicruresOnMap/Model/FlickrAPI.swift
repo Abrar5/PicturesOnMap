@@ -16,7 +16,7 @@ enum EndPoint: String {
 // MARK: - URL
 
 class FlickrAPI  {
-
+    
     // MARK: - API Handling
     
     private static let baseURLString = "https://api.flickr.com/services/rest"
@@ -50,7 +50,7 @@ class FlickrAPI  {
                 queryItems.append(item)
             }
         }
-
+        
         components.queryItems = queryItems
         return components.url!
         
@@ -84,11 +84,11 @@ class FlickrAPI  {
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
             
             let flickrResponse = try decoder.decode(FlickrResponse.self, from: data)
-           
+            
             //Filtering out photos with a missing URL
             let photos = flickrResponse.photosInfo.photos.filter { $0.remoteURL != nil }
             
-                   return .success(photos)
+            return .success(photos)
             
         } catch {
             print("Decoding Error", error)
@@ -113,7 +113,7 @@ struct FlickrPhotosResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case photos = "photo"
     }
-   
+    
 }
 
 

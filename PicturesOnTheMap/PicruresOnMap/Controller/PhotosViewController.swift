@@ -69,44 +69,48 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 cell.updateActivityIndicator(displaying: image)
                 
                 //(2)Display Distance Amount
-                let distanceInK = self.calculateDistanceBetweenLocationAndPhotoLocation(photo: photo)
-                                
+                let distanceInK = self.calculateDistance(photo: photo)
+                
                 cell.distanceLabel.text = "\(distanceInK) km"
                 
                 //(3)Display Duration Amount
-               let dateDescription = self.calculateTimeBetweenTodayAndPhotoTanken(photo: photo)
+                let dateDescription = self.calculateTimePeriod(photo: photo)
                 
                 cell.timingLabel.text = "\(dateDescription)"
                 
-            
+                
             }
         }
     }
     
     //MARK: - Calculate Distance
-   
-    func calculateDistanceBetweenLocationAndPhotoLocation(photo: Photo) -> Int {
     
-    //Display the distance
-    guard let imageLatitude = photo.latitude,
-          let imageLongitude = photo.longitude else {
-        print("Error Calculating Distance!")
-        return 0
+    func calculateDistance(photo: Photo) -> Double {
+        
+        //Display the distance
+        guard let imageLatitude = photo.latitude,
+              let imageLongitude = photo.longitude else {
+            print("Error Calculating Distance!")
+            return 0.0
+        }
+        
+        let coordinate1 = CLLocation(latitude: Double(MapViewController.latitudeString)!,
+                                     longitude:Double(MapViewController.longitudeString)!)
+        
+        let coordinate2 = CLLocation(latitude: Double(imageLatitude)!,
+                                     longitude: Double(imageLongitude)!)
+        
+        let distanceInKM = coordinate1.distance(from: coordinate2) / 1000
+        print(distanceInKM)
+
+        //Show only 1 digit after the decimal & reound it
+        return Double(round(distanceInKM*10)/10)
+        
     }
     
-    let coordinate1 = CLLocation(latitude: Double(MapViewController.latitudeString)!, longitude: Double(MapViewController.longitudeString)!)
-    
-    let coordinate2 = CLLocation(latitude: Double(imageLatitude)!, longitude: Double(imageLongitude)!)
-
-    let distanceInKM = coordinate1.distance(from: coordinate2) / 1000
-        
-        return Int(round(distanceInKM))
-    
-}
-
     //MARK: - Calculate The Time Period between Today & Date pic taken on
     
-    func calculateTimeBetweenTodayAndPhotoTanken(photo: Photo) -> String {
+    func calculateTimePeriod(photo: Photo) -> String {
         
         //Calculate the Date the pic was taken at:
         guard let imageDateTaken = photo.dateTaken else {
@@ -114,9 +118,9 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
         
         print(imageDateTaken)
-
+        
         let today = Date()
-
+        
         //Display The date pic was taken on
         // to describe the duration between `today` and `pic taken date`
         let dateFormatter: DateComponentsFormatter = {
@@ -132,7 +136,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         return String(describing: dateDescription!)
         
     }
-
+    
 }
 
 

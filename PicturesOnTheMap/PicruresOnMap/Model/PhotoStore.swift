@@ -35,16 +35,16 @@ class PhotoStore {
         let url = FlickrAPI.searchPhotosMethodURL
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) {
-                (data, response, error) in
-        
-        let result = self.processPhotosRequest(data: data, error: error)
+            (data, response, error) in
+            
+            let result = self.processPhotosRequest(data: data, error: error)
             
             //Show Response
             print(String(data: data!,
                          encoding: .utf8)!)
             
             OperationQueue.main.addOperation {
-            completion(result)
+                completion(result)
             }
         }
         task.resume()
@@ -57,7 +57,7 @@ class PhotoStore {
         guard let jsonData = data else {
             return .failure(error!)
         }
-
+        
         return FlickrAPI.photos(fromJSON: jsonData)
     }
     
@@ -95,7 +95,7 @@ class PhotoStore {
             }
             
             OperationQueue.main.addOperation {
-            completion(result)
+                completion(result)
             }
         }
         
@@ -114,8 +114,8 @@ class PhotoStore {
             } else {
                 return .failure(PhotoError.imageCreationError)
             }
-                    }
-
+        }
+        
         return .success(image)
     }
     
