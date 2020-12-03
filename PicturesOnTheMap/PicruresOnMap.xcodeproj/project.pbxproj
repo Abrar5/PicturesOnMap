@@ -63,6 +63,7 @@
 		CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicruresOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicruresOnMapUITests.swift; sourceTree = "<group>"; };
 		CE6CF27A2573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC3E14D2576FFD0007DC1C3 /* PicruresOnMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicruresOnMap.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +144,7 @@
 		CE6CF2552573FC01009E5624 /* PicruresOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				CEC3E14D2576FFD0007DC1C3 /* PicruresOnMap.entitlements */,
 				CE51697B25744D160047C438 /* Controller */,
 				CE51697A25744D0E0047C438 /* View */,
 				CE51697925744D050047C438 /* Model */,
@@ -488,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PicruresOnMap/PicruresOnMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBKV4LY323;
 				INFOPLIST_FILE = PicruresOnMap/Info.plist;
@@ -497,6 +500,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PicruresOnMap/PicruresOnMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBKV4LY323;
 				INFOPLIST_FILE = PicruresOnMap/Info.plist;
@@ -516,6 +522,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Abrar.PicruresOnMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -30,6 +30,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    //MARK: - Map Types
+    
+    @IBAction func mapTypeChanged(_ segControl: UISegmentedControl) {
+        switch segControl.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .hybrid
+        case 2:
+            mapView.mapType = .satellite
+        default:
+            break
+            
+        }
+    }
+    
     //MARK: - Call After Updating User's Location
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
