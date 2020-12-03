@@ -75,10 +75,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                                                 longitude: longitude)
         print("latitude: \(latitude) longitude: \(longitude)")
         
-        //Pass Location(3)
-//        self.locationDelegate.latitudeString = String(latitude)
-//        self.locationDelegate.longitudeString = String(longitude)
-        
         MapViewController.latitudeString = String(latitude)
         MapViewController.longitudeString = String(longitude)
         print("\(MapViewController.latitudeString) , \(MapViewController.longitudeString)")
