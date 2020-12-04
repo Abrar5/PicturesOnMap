@@ -7,22 +7,21 @@
 
 import Foundation
 
-// MARK: - End Point Method
+//MARK: - End Point Method
 
 enum EndPoint: String {
     case searchPhotosMethod = "flickr.photos.search"
 }
 
-// MARK: - URL
+//MARK: - API Handling
 
 class FlickrAPI  {
     
-    // MARK: - API Handling
+    //MARK: - Flickr URL
     
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let apiKey = "b2f9f1783412cdf8fe6aef63e11ca7fd"
     
-    //return a Flickr URL
     private static func flickrURL(endPoint: EndPoint,
                                   parameters: [String:String]?) -> URL {
         
@@ -56,6 +55,8 @@ class FlickrAPI  {
         
     }
     
+    //MARK: - Method URL
+    
     //Exposing a URL for Search Photo Method
     static var searchPhotosMethodURL: URL {
         
@@ -71,7 +72,8 @@ class FlickrAPI  {
                          ])
     }
     
-    //Decoding the JSON data
+    //MARK: - Decoding the JSON data
+    
     static func photos(fromJSON data: Data) -> Result<[Photo], Error> {
         do {
             let decoder = JSONDecoder()
@@ -98,7 +100,7 @@ class FlickrAPI  {
     }
 }
 
-//Response Structures
+//MARK: - Response Structures
 struct FlickrResponse: Codable {
     let photosInfo: FlickrPhotosResponse
     

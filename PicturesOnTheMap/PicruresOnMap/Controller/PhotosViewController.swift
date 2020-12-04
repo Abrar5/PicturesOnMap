@@ -10,10 +10,14 @@ import CoreLocation
 
 class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
+    //MARK: - Variables
+    
     @IBOutlet var collectionView: UICollectionView!
     
     var store: PhotoStore!
     let photoDataSource = PhotoDataSource()
+    
+    //MARK: - Life Cycle & Web Service Request
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +29,30 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         store.fetchPhotos {
             (photosResult) in
             
-            //Updating the collection view with the web service data
             switch photosResult {
             case let .success(photos):
-                print("Successfully found \(photos.count) photos.")
+                print("Successfully Found \(photos.count) Photos.")
                 self.photoDataSource.photos = photos
                 
             case let .failure(error):
-                print("Error fetching photos: \(error)")
+                print("Error Fetching Photos: \(error)")
                 self.photoDataSource.photos.removeAll()
             }
             
+            //Updating the collection view with the web service data
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
     
-    // MARK: - UICollectionViewDelegate
+    //MARK: - Helpers:
+    //MARK: 1- UICollectionViewDelegate
     
     //Fetching the cell’s image
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         
-        //MARK: - Handling Photo
+        //MARK: 1.1- Handling Photo
         let photo = photoDataSource.photos[indexPath.row]
         
         //Download the image data
@@ -60,22 +65,20 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             }
             let photoIndexPath = IndexPath(item: photoIndex, section: 0)
             
-            //MARK: - Displaying Information on Their Specific Cell
+            //MARK: 1.2- Displaying Information on Their Specific Cell
             
             // When the request finishes, find the current cell for this photo
             if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
                 
-                //(1)Display Image
+                //(1) Display Image
                 cell.updateActivityIndicator(displaying: image)
                 
-                //(2)Display Distance Amount
+                //(2) Display Distance Amount
                 let distanceInK = self.calculateDistance(photo: photo)
-                
                 cell.distanceLabel.text = "\(distanceInK) km"
                 
-                //(3)Display Duration Amount
+                //(3) Display Duration Amount
                 let dateDescription = self.calculateTimePeriod(photo: photo)
-                
                 cell.timingLabel.text = "\(dateDescription)"
                 
                 
@@ -83,7 +86,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    //MARK: - Calculate Distance
+    //MARK: 2- Calculate Distance
     
     func calculateDistance(photo: Photo) -> Double {
         
@@ -101,14 +104,14 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                                      longitude: Double(imageLongitude)!)
         
         let distanceInKM = coordinate1.distance(from: coordinate2) / 1000
-        print(distanceInKM)
+        print("Distance in km: \(distanceInKM)")
 
         //Show only 1 digit after the decimal & reound it
         return Double(round(distanceInKM*10)/10)
         
     }
     
-    //MARK: - Calculate The Time Period between Today & Date pic taken on
+    //MARK: 3- Calculate The Time Period between Today & Date pic taken on
     
     func calculateTimePeriod(photo: Photo) -> String {
         
@@ -117,23 +120,23 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             return "Error Calculating Period!"
         }
         
-        print(imageDateTaken)
+        print("The image was taken on: \(imageDateTaken)")
         
         let today = Date()
         
         //Display The date pic was taken on
         // to describe the duration between `today` and `pic taken date`
-        let dateFormatter: DateComponentsFormatter = {
+        let dateTimeFormatter: DateComponentsFormatter = {
             let formatter = DateComponentsFormatter()
             formatter.allowedUnits = [.year, .month]
             formatter.includesApproximationPhrase = true
             return formatter
         }()
         
-        let dateDescription = dateFormatter.string(from: imageDateTaken, to: today)
-        print(dateDescription!)
+        let dateTimeDescription = dateTimeFormatter.string(from: imageDateTaken, to: today)
+        print("The image was taken before: \(dateTimeDescription!)")
         
-        return String(describing: dateDescription!)
+        return String(describing: dateTimeDescription!)
         
     }
     

@@ -8,17 +8,18 @@
 import XCTest
 @testable import PicruresOnMap
 
-class MapTests: XCTestCase {
+class MapViewControllerTests: XCTestCase {
     
+    let mapObject = MapViewController()
+
     func testMapVariables() {
-        
-        let mapObject = MapViewController()
         
         XCTAssertNil(mapObject.mapView)
         XCTAssertNotNil(mapObject.locationManager)
         
         XCTAssertNotNil(MapViewController.latitudeString)
         XCTAssertNotNil(MapViewController.longitudeString)
+        
     }
-    
+        
 }
