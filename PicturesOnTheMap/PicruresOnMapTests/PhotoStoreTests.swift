@@ -12,7 +12,8 @@ class PhotoStoreTests: XCTestCase {
     
     let photoStoreObject = PhotoStore()
 
-    //Test Web Service Request
+    //MARK: -Test Web Service Request
+    
     func testFetchPhotos() {
 
         let completionExpectation = expectation(description: "Execute completion closure.")
@@ -30,5 +31,10 @@ class PhotoStoreTests: XCTestCase {
                 waitForExpectations(timeout: 1.0, handler: nil)
    }
 
+    //MARK: -
+    
+    func testProcessPhotosRequest() {
+
+    }
 
 }

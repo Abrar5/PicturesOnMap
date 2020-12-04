@@ -12,7 +12,8 @@ class PhotosViewControllerTests: XCTestCase {
     
     let photoObject = PhotosViewController()
 
-    //Test if the variables have a value
+    //MARK: - Test if the variables have a value
+    
     func testPhotosVariables() {
         XCTAssertNil(photoObject.collectionView)
         XCTAssertNil(photoObject.store)
@@ -20,7 +21,8 @@ class PhotosViewControllerTests: XCTestCase {
         XCTAssertNotNil(photoObject.photoDataSource)
     }
     
-    //Test Distance Method
+    //MARK: - Test Distance Method
+    
     func testDistanceResult() {
         let distance = photoObject.calculateDistance(photo: Constants.photoTestData)
        
@@ -28,7 +30,8 @@ class PhotosViewControllerTests: XCTestCase {
         XCTAssertGreaterThan(distance, -1)
     }
     
-    //Test Time Difference Method
+    //MARK: - Test Time Difference Method
+    
     func testTimeDurationResult() {
         let timeDuration = photoObject.calculateTimePeriod(photo: Constants.photoTestData)
         
