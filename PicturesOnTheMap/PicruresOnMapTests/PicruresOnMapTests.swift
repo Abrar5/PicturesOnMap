@@ -2,7 +2,7 @@
 //  PicruresOnMapTests.swift
 //  PicruresOnMapTests
 //
-//  Created by user on 14/04/1442 AH.
+//  Created by Abrar on 14/04/1442 AH.
 //
 
 import XCTest

@@ -8,7 +8,7 @@
 import XCTest
 @testable import PicruresOnMap
 
-class PhotosVCTests: XCTestCase {
+class PhotosViewControllerTests: XCTestCase {
     
     let photoObject = PhotosViewController()
 
@@ -28,6 +28,7 @@ class PhotosVCTests: XCTestCase {
         XCTAssertGreaterThan(distance, -1)
     }
     
+    //Test Time Difference Method
     func testTimeDurationResult() {
         let timeDuration = photoObject.calculateTimePeriod(photo: Constants.photoTestData)
         

@@ -10,7 +10,8 @@ class ImageStore {
     
     let cache = NSCache<NSString,UIImage>()
     
-    //..ADD
+    //MARK: - ADD
+    
     func setImage(_ image: UIImage, forKey key: String){
         cache.setObject(image, forKey: key as NSString)
         
@@ -25,7 +26,8 @@ class ImageStore {
         
     }
     
-    //..RETERIVE
+    //MARK: - RETERIVE
+    
     func image(forKey key: String) -> UIImage? {
         // return cache.object(forKey: key as NSString)
         
@@ -43,7 +45,8 @@ class ImageStore {
         
     }
     
-    //..DELETE
+    //MARK: - DELETE
+    
     func deleteImage(forKey key: String) {
         cache.removeObject(forKey: key as NSString)
         
@@ -57,6 +60,8 @@ class ImageStore {
         }
         
     }
+    
+    //MARK: - Get Image URL
     
     //get a URL for a given image
     func imageURL(forKey key: String) -> URL {

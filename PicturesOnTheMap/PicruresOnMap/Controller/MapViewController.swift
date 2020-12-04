@@ -11,15 +11,15 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
+    //MARK: - Variables
+    
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     
     static var latitudeString: String = "0"
     static var longitudeString: String = "0"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    //MARK: - Life Cycle
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -28,6 +28,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        print("Location Manager: \(locationManager)")
     }
     
     //MARK: - Map Types
@@ -54,18 +55,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
             
+            print("CCLocation: \(location)")
             mapFocus(location)
             
         }
     }
     
+    //MARK: - Handling Location Manager Fail & Error
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error \(error)")
+        print("Error with Location Manager: \(error)")
     }
     
     
     //MARK: - Set Map's Region
+    
     func mapFocus(_ location: CLLocation) {
         
         //Specify coordinate (latitude & longitude)
@@ -73,11 +77,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let longitude = location.coordinate.longitude
         let coordinate = CLLocationCoordinate2D(latitude: latitude,
                                                 longitude: longitude)
-        print("latitude: \(latitude) longitude: \(longitude)")
+        print("Latitude: \(latitude) , Longitude: \(longitude)")
         
         MapViewController.latitudeString = String(latitude)
         MapViewController.longitudeString = String(longitude)
-        print("\(MapViewController.latitudeString) , \(MapViewController.longitudeString)")
+        print("latitudeString: \(MapViewController.latitudeString) , longitudeString: \(MapViewController.longitudeString)")
         
         //set a focusede region
         let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)

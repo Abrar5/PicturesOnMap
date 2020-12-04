@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//MARK: - Error Handling
+//MARK: Error Handling
 
 //Adding an error type to represent photo errors
 enum PhotoError: Error {
@@ -16,7 +16,7 @@ enum PhotoError: Error {
     case missingImageURL
 }
 
-//MARK: - Photo Handling
+//MARK: Photo Handling
 
 //Initiating the web service requests & Sending the Request
 class PhotoStore {
@@ -29,6 +29,8 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
+    //MARK: - API Request
+    
     //Start the web service request & transfer it to the server.
     func fetchPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         
@@ -40,8 +42,7 @@ class PhotoStore {
             let result = self.processPhotosRequest(data: data, error: error)
             
             //Show Response
-            print(String(data: data!,
-                         encoding: .utf8)!)
+            print("JSON Response: \(String(data: data!, encoding: .utf8)!)")
             
             OperationQueue.main.addOperation {
                 completion(result)
@@ -50,8 +51,9 @@ class PhotoStore {
         task.resume()
     }
     
-    //Processing the web service data
-    private func processPhotosRequest(data: Data?,
+    //MARK: - Processing the web service data after API Request
+    
+    /*private*/ func processPhotosRequest(data: Data?,
                                       error: Error?) -> Result<[Photo], Error> {
         
         guard let jsonData = data else {
@@ -60,6 +62,8 @@ class PhotoStore {
         
         return FlickrAPI.photos(fromJSON: jsonData)
     }
+    
+    //MARK: - Image Request
     
     //Download image data
     func fetchImage(for photo: Photo,
@@ -102,8 +106,9 @@ class PhotoStore {
         task.resume()
     }
     
-    //processes the data from the request into an image
-    private func processImageRequest(data: Data?,
+    //MARK: - Processing the image data into an image after Image Request
+
+    /*private*/ func processImageRequest(data: Data?,
                                      error: Error?) -> Result<UIImage, Error> {
         guard let imageData = data,
               let image = UIImage(data: imageData) else {

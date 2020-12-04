@@ -22,9 +22,12 @@
 		CE6CF2632573FC02009E5624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6CF2612573FC02009E5624 /* LaunchScreen.storyboard */; };
 		CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */; };
 		CE6CF2792573FC02009E5624 /* PicruresOnMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */; };
-		CEB49B032578F4A900E3170F /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B022578F4A900E3170F /* MapTests.swift */; };
+		CEB49B032578F4A900E3170F /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B022578F4A900E3170F /* MapViewControllerTests.swift */; };
 		CEB49B0B2578F73100E3170F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B0A2578F73100E3170F /* Constants.swift */; };
-		CEB49B1C25792C2200E3170F /* PhotosVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B1B25792C2200E3170F /* PhotosVCTests.swift */; };
+		CEB49B1C25792C2200E3170F /* PhotosViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B1B25792C2200E3170F /* PhotosViewControllerTests.swift */; };
+		CEB49B3225798DC400E3170F /* PhotoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B3125798DC400E3170F /* PhotoStoreTests.swift */; };
+		CEB49B3D2579AE8200E3170F /* FlickrAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */; };
+		CEB49B45257A420600E3170F /* ImageStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B44257A420600E3170F /* ImageStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +69,12 @@
 		CE6CF2742573FC02009E5624 /* PicruresOnMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicruresOnMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CF2782573FC02009E5624 /* PicruresOnMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicruresOnMapUITests.swift; sourceTree = "<group>"; };
 		CE6CF27A2573FC02009E5624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEB49B022578F4A900E3170F /* MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTests.swift; sourceTree = "<group>"; };
+		CEB49B022578F4A900E3170F /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		CEB49B0A2578F73100E3170F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CEB49B1B25792C2200E3170F /* PhotosVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosVCTests.swift; sourceTree = "<group>"; };
+		CEB49B1B25792C2200E3170F /* PhotosViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewControllerTests.swift; sourceTree = "<group>"; };
+		CEB49B3125798DC400E3170F /* PhotoStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStoreTests.swift; sourceTree = "<group>"; };
+		CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPITests.swift; sourceTree = "<group>"; };
+		CEB49B44257A420600E3170F /* ImageStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStoreTests.swift; sourceTree = "<group>"; };
 		CEC3E14D2576FFD0007DC1C3 /* PicruresOnMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicruresOnMap.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,9 +174,12 @@
 			children = (
 				CE6CF26D2573FC02009E5624 /* PicruresOnMapTests.swift */,
 				CE6CF26F2573FC02009E5624 /* Info.plist */,
-				CEB49B022578F4A900E3170F /* MapTests.swift */,
-				CEB49B1B25792C2200E3170F /* PhotosVCTests.swift */,
 				CEB49B0A2578F73100E3170F /* Constants.swift */,
+				CEB49B022578F4A900E3170F /* MapViewControllerTests.swift */,
+				CEB49B1B25792C2200E3170F /* PhotosViewControllerTests.swift */,
+				CEB49B3125798DC400E3170F /* PhotoStoreTests.swift */,
+				CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */,
+				CEB49B44257A420600E3170F /* ImageStoreTests.swift */,
 			);
 			path = PicruresOnMapTests;
 			sourceTree = "<group>";
@@ -331,10 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB49B3225798DC400E3170F /* PhotoStoreTests.swift in Sources */,
+				CEB49B45257A420600E3170F /* ImageStoreTests.swift in Sources */,
 				CE6CF26E2573FC02009E5624 /* PicruresOnMapTests.swift in Sources */,
-				CEB49B032578F4A900E3170F /* MapTests.swift in Sources */,
+				CEB49B032578F4A900E3170F /* MapViewControllerTests.swift in Sources */,
+				CEB49B3D2579AE8200E3170F /* FlickrAPITests.swift in Sources */,
 				CEB49B0B2578F73100E3170F /* Constants.swift in Sources */,
-				CEB49B1C25792C2200E3170F /* PhotosVCTests.swift in Sources */,
+				CEB49B1C25792C2200E3170F /* PhotosViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

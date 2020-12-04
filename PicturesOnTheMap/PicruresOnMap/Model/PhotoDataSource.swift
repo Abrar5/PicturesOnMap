@@ -23,9 +23,9 @@ class PhotoDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
         
         cell.updateActivityIndicator(displaying: nil)
-        cell.timingLabel.text = ""
         cell.distanceLabel.text = ""
-        
+        cell.timingLabel.text = ""
+       
         return cell
     }
     
