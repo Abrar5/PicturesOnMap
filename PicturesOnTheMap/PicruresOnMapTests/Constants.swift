@@ -54,13 +54,38 @@ enum Constants {
            "id": photoID,
            "latitude": latitude,
            "longitude": longitude,
-           "datetaken": date
+           "datetaken": dateString
         ]
+    
     
     static let photosDictionary = ["photo" : [validPhotoDictionary]]
     static let flickrDictionary = ["photos" : photosDictionary]
     
     static let jsonData = try! JSONSerialization.data(withJSONObject: flickrDictionary)
+    
+    static let jsonData1 = """
+        {
+            "id": "50674085742",
+            "owner": "48945861@N06",
+            "secret": "8bf343e9d6",
+            "server": "65535",
+            "farm": 66,
+            "title": "Uplifting!",
+            "ispublic": 1,
+            "isfriend": 0,
+            "isfamily": 0,
+            "datetaken": "2020-11-30 07:57:55",
+            "datetakengranularity": "0",
+            "datetakenunknown": "0",
+            "latitude": 0,
+            "longitude": 0,
+            "accuracy": 0,
+            "context": 0,
+            "url_h": "https://live.staticflickr.com/65535/50674085742_65c05bf154_h.jpg",
+            "height_h": 1067,
+            "width_h": 1600
+        }
+ """.data(using: .utf8)
     
     
 }

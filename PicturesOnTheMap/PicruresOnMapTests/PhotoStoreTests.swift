@@ -50,9 +50,23 @@ class PhotoStoreTests: XCTestCase {
         waitForExpectations(timeout: 1.0, handler: nil)
     }
     
-    //MARK: -
+    //MARK: - Test Process Photos Request
+    
     func testProcessPhotosRequest() {
+        let photoResult = photoStoreObject.processPhotosRequest(data: Constants.jsonData,
+                                                                error: nil)
+        XCTAssertNotNil(photoResult)
+        print("result \(photoResult)")
         
+    }
+    
+    //MARK: - Test Process Images Request
+    
+    func testProcessImageRequest() {
+        let imageResult = photoStoreObject.processImageRequest(data: Constants.jsonData,
+                                                               error: nil)
+        XCTAssertNotNil(imageResult)
+        print("result \(imageResult)")
     }
     
 }
