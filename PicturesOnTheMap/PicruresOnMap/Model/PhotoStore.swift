@@ -85,19 +85,21 @@ class PhotoStore {
             completion(.failure(PhotoError.missingImageURL))
             return
         }
-        
+
         let request = URLRequest(url: photoURL)
         let task = session.dataTask(with: request) {
             (data, response, error) in
-            
+
             //Convert into image
             let result = self.processImageRequest(data: data, error: error)
+
             
             //Add Image
             if case let .success(image) = result {
+                print("data \(String(describing: data))")
                 self.imageStore.setImage(image, forKey: photoKey)
             }
-            
+
             OperationQueue.main.addOperation {
                 completion(result)
             }
@@ -112,7 +114,7 @@ class PhotoStore {
                                      error: Error?) -> Result<UIImage, Error> {
         guard let imageData = data,
               let image = UIImage(data: imageData) else {
-            
+
             //Couldn't create an image
             if data == nil {
                 return .failure(error!)
@@ -120,7 +122,8 @@ class PhotoStore {
                 return .failure(PhotoError.imageCreationError)
             }
         }
-        
+
+        print("image: \(image)")
         return .success(image)
     }
     

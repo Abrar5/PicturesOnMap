@@ -13,8 +13,13 @@ enum Constants {
     //MARK: - API
     
     static let urlString = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=b2f9f1783412cdf8fe6aef63e11ca7fd&safe_search=1&has_geo=1&lat=24.853962867051948&lon=46.7134110745225&radius=0.5&extras=url_n%2C+geo%2C+date_taken&per_page=30&format=json&nojsoncallback=1"
-    
+
     static let apiURL = URL(string: urlString)!
+    
+    static let okResponse = HTTPURLResponse(url: apiURL,
+                                            statusCode: 200,
+                                            httpVersion: nil,
+                                            headerFields: nil)!
     
     //MARK: - PHOTO
     
@@ -32,6 +37,7 @@ enum Constants {
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = TimeZone(abbreviation: "UTC")!
         return formatter
     }()
     
@@ -65,7 +71,15 @@ enum Constants {
 }
 """.data(using: .utf8)!
     
+    //MARK:- URLSession property
     
+    static let sessionConfiguration: URLSessionConfiguration = {
+        //zero data persistance of any kind. No cookies, no caches, no nothing.
+           let config = URLSessionConfiguration.ephemeral
+        
+           config.protocolClasses = [FakeFlickrURLProtocol.self]
+           return config
+   }()
     
 }
 
