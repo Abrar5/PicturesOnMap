@@ -1,6 +1,6 @@
 //
 //  ImageStore.swift
-//  LootLogger
+//  PicruresOnMap
 //
 //  Created by Abrar on 06/03/1442 AH.
 //
