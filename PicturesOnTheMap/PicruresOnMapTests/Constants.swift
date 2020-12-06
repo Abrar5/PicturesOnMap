@@ -24,13 +24,14 @@ enum Constants {
     static let photoID = "49164363111"
     static let latitude = "24.840222"
     static let longitude = "46.732455"
+   // static let dateTaken = Date
     
     //MARK: - Date
     
-    static let dateString = "2019-11-28"
+    static let dateString = "2019-11-28 20:17:33"
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
     
@@ -44,48 +45,26 @@ enum Constants {
                                      longitude: longitude,
                                      dateTaken: date)
     
-    
-    
     //MARK: - JSON
     
-    static let validPhotoDictionary: [String:Any] =
-        [  "title": "",
-           "url_n": remoteURLString,
-           "id": photoID,
-           "latitude": latitude,
-           "longitude": longitude,
-           "datetaken": dateString
-        ]
+    static let jsonData = """
+{
+  "photos": {
+    "page": 1,
+    "pages": 10984,
+    "perpage": 30,
+    "total": "329494",
+    "photo": [
+    {"id":"\(photoID)",
+    "title":"\(title)",
+    "datetaken":"\(dateString)",
+    "latitude":"\(latitude)",
+    "longitude":"\(longitude)",
+    "url_n":"\(remoteURL)"}]},
+  "stat": "ok"
+}
+""".data(using: .utf8)!
     
-    
-    static let photosDictionary = ["photo" : [validPhotoDictionary]]
-    static let flickrDictionary = ["photos" : photosDictionary]
-    
-    static let jsonData = try! JSONSerialization.data(withJSONObject: flickrDictionary)
-    
-    static let jsonData1 = """
-        {
-            "id": "50674085742",
-            "owner": "48945861@N06",
-            "secret": "8bf343e9d6",
-            "server": "65535",
-            "farm": 66,
-            "title": "Uplifting!",
-            "ispublic": 1,
-            "isfriend": 0,
-            "isfamily": 0,
-            "datetaken": "2020-11-30 07:57:55",
-            "datetakengranularity": "0",
-            "datetakenunknown": "0",
-            "latitude": 0,
-            "longitude": 0,
-            "accuracy": 0,
-            "context": 0,
-            "url_h": "https://live.staticflickr.com/65535/50674085742_65c05bf154_h.jpg",
-            "height_h": 1067,
-            "width_h": 1600
-        }
- """.data(using: .utf8)
     
     
 }

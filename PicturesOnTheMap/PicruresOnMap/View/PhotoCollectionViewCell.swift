@@ -20,7 +20,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         if let imageToDisplay = image {
             activityIndicator.stopAnimating()
             imageView.image = imageToDisplay
-            
         } else {
             activityIndicator.startAnimating()
             imageView.image = nil

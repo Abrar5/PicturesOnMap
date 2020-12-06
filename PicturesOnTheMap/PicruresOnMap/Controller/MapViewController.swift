@@ -29,6 +29,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         print("Location Manager: \(locationManager)")
+        mapView.mapType = .mutedStandard
     }
     
     //MARK: - Map Types
@@ -36,11 +37,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func mapTypeChanged(_ segControl: UISegmentedControl) {
         switch segControl.selectedSegmentIndex {
         case 0:
-            mapView.mapType = .standard
+            mapView.mapType = .mutedStandard
         case 1:
-            mapView.mapType = .hybrid
+            mapView.mapType = .hybridFlyover
         case 2:
-            mapView.mapType = .satellite
+            mapView.mapType = .satelliteFlyover
         default:
             break
             
@@ -96,19 +97,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    //MARK: - Move to Another View Controller
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        
-        case "PhotosSegue":
-            let photoViewController = segue.destination as! PhotosViewController
-            photoViewController.store = PhotoStore()
-            
-        default:
-            preconditionFailure("Unexpected segue identifier.")
-            
-        }
-    }
     
 }
