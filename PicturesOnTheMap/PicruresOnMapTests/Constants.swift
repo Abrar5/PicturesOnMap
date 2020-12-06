@@ -24,13 +24,14 @@ enum Constants {
     static let photoID = "49164363111"
     static let latitude = "24.840222"
     static let longitude = "46.732455"
+   // static let dateTaken = Date
     
     //MARK: - Date
     
-    static let dateString = "2019-11-28"
+    static let dateString = "2019-11-28 20:17:33"
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
     
@@ -44,23 +45,26 @@ enum Constants {
                                      longitude: longitude,
                                      dateTaken: date)
     
-    
-    
     //MARK: - JSON
     
-    static let validPhotoDictionary: [String:Any] =
-        [  "title": "",
-           "url_n": remoteURLString,
-           "id": photoID,
-           "latitude": latitude,
-           "longitude": longitude,
-           "datetaken": date
-        ]
+    static let jsonData = """
+{
+  "photos": {
+    "page": 1,
+    "pages": 10984,
+    "perpage": 30,
+    "total": "329494",
+    "photo": [
+    {"id":"\(photoID)",
+    "title":"\(title)",
+    "datetaken":"\(dateString)",
+    "latitude":"\(latitude)",
+    "longitude":"\(longitude)",
+    "url_n":"\(remoteURL)"}]},
+  "stat": "ok"
+}
+""".data(using: .utf8)!
     
-    static let photosDictionary = ["photo" : [validPhotoDictionary]]
-    static let flickrDictionary = ["photos" : photosDictionary]
-    
-    static let jsonData = try! JSONSerialization.data(withJSONObject: flickrDictionary)
     
     
 }

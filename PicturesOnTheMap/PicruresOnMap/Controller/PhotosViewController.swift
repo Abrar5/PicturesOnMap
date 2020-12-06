@@ -24,6 +24,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         
         collectionView.dataSource = photoDataSource
         collectionView.delegate = self
+        self.store = PhotoStore()
+
         
         //Initiating the web service request
         store.fetchPhotos {
@@ -81,11 +83,11 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 let dateDescription = self.calculateTimePeriod(photo: photo)
                 cell.timingLabel.text = "\(dateDescription)"
                 
-                
             }
         }
     }
     
+
     //MARK: 2- Calculate Distance
     
     func calculateDistance(photo: Photo) -> Double {
@@ -139,6 +141,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         return String(describing: dateTimeDescription!)
         
     }
+    
+    
     
 }
 
