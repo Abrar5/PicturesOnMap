@@ -53,7 +53,7 @@ enum Constants {
     "photo": [
     {"id":"\(photoID)",
     "title":"\(title)",
-    "date_taken":"\(dateString)",
+    "datetaken":"\(dateString)",
     "latitude":"\(latitude)",
     "longitude":"\(longitude)",
     "url_n":"\(remoteURL)"}]},
