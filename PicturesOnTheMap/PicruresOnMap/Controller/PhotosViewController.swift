@@ -16,7 +16,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
     
     var store: PhotoStore!
     let photoDataSource = PhotoDataSource()
-    
+
     //MARK: - Life Cycle & Web Service Request
     
     override func viewDidLoad() {
@@ -83,6 +83,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 let dateDescription = self.calculateTimePeriod(photo: photo)
                 cell.timingLabel.text = "\(dateDescription)"
                 
+
             }
         }
     }
@@ -141,9 +142,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         return String(describing: dateTimeDescription!)
         
     }
-    
-    
-    
+
 }
 
 

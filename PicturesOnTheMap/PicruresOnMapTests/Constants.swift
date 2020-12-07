@@ -10,13 +10,7 @@ import Foundation
 
 enum Constants {
     
-    //MARK: - API
-    
-    static let urlString = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=b2f9f1783412cdf8fe6aef63e11ca7fd&safe_search=1&has_geo=1&lat=24.853962867051948&lon=46.7134110745225&radius=0.5&extras=url_n%2C+geo%2C+date_taken&per_page=30&format=json&nojsoncallback=1"
-    
-    static let apiURL = URL(string: urlString)!
-    
-    //MARK: - PHOTO
+    //MARK: - PHOTO Example
     
     static let title = ""
     static let remoteURLString = "https://live.staticflickr.com/65535/49164363111_3ba3bed23c_n.jpg"
@@ -24,18 +18,20 @@ enum Constants {
     static let photoID = "49164363111"
     static let latitude = "24.840222"
     static let longitude = "46.732455"
-   // static let dateTaken = Date
     
-    //MARK: - Date
+    //MARK: - Date Converter
     
     static let dateString = "2019-11-28 20:17:33"
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = TimeZone(abbreviation: "UTC")!
         return formatter
     }()
     
     static let date = dateFormatter.date(from: dateString)!
+    
+    //MARK: - Image Example
     
     //an image that is 0.0 km far & taken about 0 month ago
     static let photoTestData = Photo(title: title,
@@ -45,7 +41,7 @@ enum Constants {
                                      longitude: longitude,
                                      dateTaken: date)
     
-    //MARK: - JSON
+    //MARK: - JSON Response Example
     
     static let jsonData = """
 {
@@ -57,15 +53,13 @@ enum Constants {
     "photo": [
     {"id":"\(photoID)",
     "title":"\(title)",
-    "datetaken":"\(dateString)",
+    "date_taken":"\(dateString)",
     "latitude":"\(latitude)",
     "longitude":"\(longitude)",
     "url_n":"\(remoteURL)"}]},
   "stat": "ok"
 }
 """.data(using: .utf8)!
-    
-    
     
 }
 

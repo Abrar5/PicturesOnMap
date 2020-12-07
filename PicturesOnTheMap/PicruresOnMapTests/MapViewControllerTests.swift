@@ -12,6 +12,8 @@ class MapViewControllerTests: XCTestCase {
     
     let mapObject = MapViewController()
 
+    //MARK: - Test if the variables have a value
+    
     func testMapVariables() {
         
         XCTAssertNil(mapObject.mapView)

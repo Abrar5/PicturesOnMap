@@ -1,6 +1,6 @@
 //
 //  ImageStore.swift
-//  LootLogger
+//  PicruresOnMap
 //
 //  Created by Abrar on 06/03/1442 AH.
 //
@@ -29,7 +29,6 @@ class ImageStore {
     //MARK: - RETERIVE
     
     func image(forKey key: String) -> UIImage? {
-        // return cache.object(forKey: key as NSString)
         
         if let existingImage = cache.object(forKey: key as NSString) {
             return existingImage

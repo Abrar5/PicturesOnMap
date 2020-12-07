@@ -11,7 +11,7 @@ import XCTest
 class PhotoStoreTests: XCTestCase {
     
     let photoStoreObject = PhotoStore()
-    
+  
     //MARK: -Test Web Service Request
     
     func testFetchPhotos() {
@@ -57,31 +57,51 @@ class PhotoStoreTests: XCTestCase {
                                                                 error:nil)
         XCTAssertNotNil(photoResult)
         
-                switch photoResult {
-                case .success(let Photos):
-                    XCTAssert(Photos.count == 1)
-                    let thePhoto = Photos[0]
-                    XCTAssertEqual(thePhoto.title, Constants.title)
-                    XCTAssertEqual(thePhoto.remoteURL, Constants.remoteURL)
-                    XCTAssertEqual(thePhoto.photoID, Constants.photoID)
-                    XCTAssertEqual(thePhoto.latitude, Constants.latitude)
-                    XCTAssertEqual(thePhoto.longitude, Constants.longitude)
-                   // XCTAssertEqual(thePhoto.dateTaken, Constants.date)
-                    XCTAssertNotNil(thePhoto.dateTaken)
-                    
-                case .failure(let error):
-                    XCTFail("Result contains Failure due to\(error)")
-
-                }
+        switch photoResult {
+        case .success(let Photos):
+            XCTAssert(Photos.count == 1)
+            let thePhoto = Photos[0]
+            XCTAssertEqual(thePhoto.title, Constants.title)
+            XCTAssertEqual(thePhoto.remoteURL, Constants.remoteURL)
+            XCTAssertEqual(thePhoto.photoID, Constants.photoID)
+            XCTAssertEqual(thePhoto.latitude, Constants.latitude)
+            XCTAssertEqual(thePhoto.longitude, Constants.longitude)
+            XCTAssertEqual(thePhoto.dateTaken, Constants.date)
+            XCTAssertNotNil(thePhoto.dateTaken)
+            
+        case .failure(let error):
+            XCTFail("Result contains Failure due to\(error)")
+            
+        }
     }
     
     //MARK: - Test Process Images Request
     
     func testProcessImageRequest() {
-        let imageResult = photoStoreObject.processImageRequest(data: Constants.jsonData,
+      
+        //convert image url to data
+        let imageURL = Constants.remoteURL
+        let imageData =  try! Data(contentsOf: imageURL)
+        
+        
+        let imageResult = photoStoreObject.processImageRequest(data: imageData,
                                                                error: nil)
+        
         XCTAssertNotNil(imageResult)
-        print("result \(imageResult)")
+
+        switch imageResult {
+        case .success(let image):
+            XCTAssertNotNil(image)
+            
+            let uiimage = UIImage(data: imageData)
+            XCTAssertNotNil(uiimage)
+           // XCTAssertEqual(image, uiimage)
+
+        case .failure(let error):
+            XCTFail("Result contains Failure due to\(error)")
+
+        }
+        
     }
     
 }
