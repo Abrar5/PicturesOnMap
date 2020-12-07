@@ -20,7 +20,7 @@ struct Photo : Codable {
         case photoID = "id"
         case latitude
         case longitude
-        case dateTaken = "datetaken"
+        case dateTaken = "date_taken"
     }
     
 }

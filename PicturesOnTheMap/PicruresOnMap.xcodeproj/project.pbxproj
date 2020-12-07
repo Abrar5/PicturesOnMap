@@ -27,7 +27,6 @@
 		CEB49B3225798DC400E3170F /* PhotoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B3125798DC400E3170F /* PhotoStoreTests.swift */; };
 		CEB49B3D2579AE8200E3170F /* FlickrAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */; };
 		CEB49B45257A420600E3170F /* ImageStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB49B44257A420600E3170F /* ImageStoreTests.swift */; };
-		CED07A84257D3AB0009A046B /* FakeFlickrURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED07A83257D3AB0009A046B /* FakeFlickrURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +74,6 @@
 		CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPITests.swift; sourceTree = "<group>"; };
 		CEB49B44257A420600E3170F /* ImageStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStoreTests.swift; sourceTree = "<group>"; };
 		CEC3E14D2576FFD0007DC1C3 /* PicruresOnMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicruresOnMap.entitlements; sourceTree = "<group>"; };
-		CED07A83257D3AB0009A046B /* FakeFlickrURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFlickrURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +177,6 @@
 				CEB49B3125798DC400E3170F /* PhotoStoreTests.swift */,
 				CEB49B3C2579AE8200E3170F /* FlickrAPITests.swift */,
 				CEB49B44257A420600E3170F /* ImageStoreTests.swift */,
-				CED07A83257D3AB0009A046B /* FakeFlickrURLProtocol.swift */,
 			);
 			path = PicruresOnMapTests;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 				CEB49B45257A420600E3170F /* ImageStoreTests.swift in Sources */,
 				CEB49B032578F4A900E3170F /* MapViewControllerTests.swift in Sources */,
 				CEB49B3D2579AE8200E3170F /* FlickrAPITests.swift in Sources */,
-				CED07A84257D3AB0009A046B /* FakeFlickrURLProtocol.swift in Sources */,
 				CEB49B0B2578F73100E3170F /* Constants.swift in Sources */,
 				CEB49B1C25792C2200E3170F /* PhotosViewControllerTests.swift in Sources */,
 			);

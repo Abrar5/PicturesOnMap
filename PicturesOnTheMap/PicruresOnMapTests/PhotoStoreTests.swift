@@ -11,7 +11,7 @@ import XCTest
 class PhotoStoreTests: XCTestCase {
     
     let photoStoreObject = PhotoStore()
-    
+  
     //MARK: -Test Web Service Request
     
     func testFetchPhotos() {
@@ -94,6 +94,7 @@ class PhotoStoreTests: XCTestCase {
             XCTAssertNotNil(image)
             
             let uiimage = UIImage(data: imageData)
+            XCTAssertNotNil(uiimage)
            // XCTAssertEqual(image, uiimage)
 
         case .failure(let error):
