@@ -28,32 +28,14 @@ class ImageStoreTests: XCTestCase {
     //MARK: - Test retrieve image from disk function
     
     func testImage() {
-        
-        //1. Assume the image is not saved before
-        let notSavedImage = imageStoreObject.image(forKey: Constants.photoID)
-        XCTAssertNil(notSavedImage)
-        
-        //2. Assume the image is saved
-        testSetImage()
+    
         let savedImage = imageStoreObject.image(forKey: Constants.photoID)
 
         XCTAssertNotNil(savedImage)
         //URL on disk is longer than the real URL
         XCTAssertNotEqual(savedImage, UIImage(data: imageData)!)
     }
-    
-    //MARK: - Test deleting image from disk function
-    
-    func testDeleteImage() {
-        
-        imageStoreObject.deleteImage(forKey: Constants.photoID)
-        
-        //Make sure pic is deleted from disk
-        if cache.object(forKey: Constants.photoID as NSString) != nil {
-            XCTFail("This image is not deleted yet!")
-        }
-        
-    }
+
     
     //MARK: - Test if the generated image URL in Ducument Directory is  different than its URL.
     

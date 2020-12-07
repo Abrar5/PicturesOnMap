@@ -13,7 +13,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var timingLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    
+        
     //Control Activity Indicator Appearance
     func updateActivityIndicator(displaying image: UIImage?) {
         
