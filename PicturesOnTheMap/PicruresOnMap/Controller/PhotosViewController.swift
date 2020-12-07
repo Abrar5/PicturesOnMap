@@ -47,6 +47,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     //MARK: - Helpers:
+    
     //MARK: 1- UICollectionViewDelegate
     
     //Fetching the cell’s image
@@ -71,6 +72,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             
             // When the request finishes, find the current cell for this photo
             if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                
                 
                 //(1) Display Image
                 cell.updateActivityIndicator(displaying: image)

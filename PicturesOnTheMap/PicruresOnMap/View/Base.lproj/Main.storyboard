@@ -86,7 +86,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="32A-EU-CEB">
                                 <rect key="frame" x="0.0" y="134" width="414" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" sectionInsetReference="layoutMargins" id="05z-hw-zgh">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" sectionInsetReference="layoutMargins" id="05z-hw-zgh">
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="estimatedItemSize" width="180" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -95,7 +95,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PhotoCollectionViewCell" id="N0p-NH-BlM" customClass="PhotoCollectionViewCell" customModule="PicruresOnMap" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="13" width="200" height="200"/>
+                                        <rect key="frame" x="13" y="13" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y25-Pg-jLc">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
