@@ -9,4 +9,5 @@ an iOS app that shows pictures related to specific locations from Flickr API on 
 - Persist these images in a local disk cache.
 - Unit tests that verify the correctness of the model and transformation code.
 
-![](MapPics.gif)
+<img src="MapPics.gif" width="40" height="40" />
+
