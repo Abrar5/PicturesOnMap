@@ -28,7 +28,8 @@ class ImageStoreTests: XCTestCase {
     //MARK: - Test retrieve image from disk function
     
     func testImage() {
-    
+
+        testSetImage()
         let savedImage = imageStoreObject.image(forKey: Constants.photoID)
 
         XCTAssertNotNil(savedImage)
