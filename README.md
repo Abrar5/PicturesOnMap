@@ -1,5 +1,5 @@
 # PicturesOnMap
-an iOS app that shows pictures related to specific locations from Flickr API on the map Kit.
+an iOS app that shows pictures related to specific locations from Flickr API on the MapKit.
 
 # Feattures: 
 - Get the user’s location (latitude and longitude) using Core Location.
