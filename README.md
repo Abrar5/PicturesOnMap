@@ -11,3 +11,5 @@ an iOS app that shows pictures related to specific locations from Flickr API on 
 
 <img src="MapPics.gif" width="40" height="40" />
 
+![Output](https://github.com/Abrar5/PicturesOnMap/tree/main/Output)
+
