@@ -9,5 +9,5 @@ an iOS app that shows pictures related to specific locations from Flickr API on 
 - Persist these images in a local disk cache.
 - Unit tests that verify the correctness of the model and transformation code.
 
-![Output](https://github.com/Abrar5/PicturesOnMap/tree/main/Output/MapPics.gif)
+![Output](MapPics.gif)
 
